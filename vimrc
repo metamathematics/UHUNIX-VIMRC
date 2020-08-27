@@ -2,7 +2,9 @@
 set autoindent
 
 " Indent 4 spaces
+set tabstop=4
 set shiftwidth=4
+set expandtab
 
 " Stop certain movements from always going to the first character of a line
 set nostartofline
@@ -25,8 +27,8 @@ inoremap [ []<left>
 inoremap [] []
 inoremap { {}<left>
 inoremap {} {}<left>
-inoremap {<CR> {<CR>}<ESC>:><CR>i<CR><ESC>:<<CR>i<up><right><right><right><right>
+inoremap {<CR> {<CR><CR>}<ESC>ki<TAB>
 inoremap /*<TAB> /*  */<left><left><left>
 
 " The main function
-inoremap main<CR> int main()<CR>{<CR>}<ESC>:><CR>i<CR><ESC>:<<CR>i<up><right><right><right><right>
+inoremap main<CR> int main()<CR>{<CR><CR>}<ESC>ki<TAB>
