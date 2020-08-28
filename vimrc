@@ -1,7 +1,7 @@
 " Keep the same indent as the line you're currently on
 set autoindent
 
-" Indent 4 spaces
+" Set tab to 4 spaces, indent 4 spaces, convert tab character to white space
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -27,8 +27,8 @@ inoremap [ []<left>
 inoremap [] []
 inoremap { {}<left>
 inoremap {} {}<left>
-inoremap {<CR> {<CR><CR>}<ESC>ki<TAB>
+inoremap {<CR> {<CR><CR>}<ESC><UP>i<TAB>
 inoremap /*<TAB> /*  */<left><left><left>
 
 " The main function
-inoremap main<CR> int main()<CR>{<CR><CR>}<ESC>ki<TAB>
+inoremap main<CR> int main()<CR>{<CR><CR>}<ESC><UP>i<TAB>
