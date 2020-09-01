@@ -32,3 +32,6 @@ inoremap /*<TAB> /*  */<left><left><left>
 
 " The main function
 inoremap main<CR> int main()<CR>{<CR><CR>}<ESC><UP>i<TAB>
+
+" The main function with args
+inoremap main-args<CR> int main(int arc, char *argv[])<CR>{<CR><CR>}<ESC><UP>i<TAB>
