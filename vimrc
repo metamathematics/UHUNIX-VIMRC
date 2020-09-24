@@ -1,10 +1,17 @@
 " Keep the same indent as the line you're currently on
 set autoindent
 
-" Set tab to 4 spaces, indent 4 spaces, convert tab character to white space
+" Set tab and indent to 4 spaces
 set tabstop=4
 set shiftwidth=4
-set expandtab
+
+" If file is not Makefile, convert tab character to white space
+let _curfile = expand("%:t")
+if _curfile =~ "Makefile"
+    set noexpandtab
+else
+    set expandtab
+endif
 
 " Stop certain movements from always going to the first character of a line
 set nostartofline
